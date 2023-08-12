@@ -1,14 +1,15 @@
 import AboutBanner from "../../components/AboutBanner/AboutBanner";
 import Collapse from "../../components/Collapse/Collapse";
 import React from "react";
-import data from "../../datas/Data.json"
+import dataArray from "../../datas/dataArray.json"
 
 export default function About() {
 
     return (
         <>
+            {/*<div>{console.log(dataArray)}</div>*/}
             <AboutBanner />
-            {data.map((rule, id) =>(
+            {dataArray.map((rule, id) =>(
                 <Collapse
                     key={id}
                     aboutTitle={rule.aboutTitle}
