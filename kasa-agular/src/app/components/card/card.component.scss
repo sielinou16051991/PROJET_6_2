@@ -1,0 +1,111 @@
+.card-logement {
+  position: relative;
+  display: flex;
+  width: 335px;
+  height: 255px;
+  //@include small-redius;
+
+  border-radius: 10px;
+
+  min-width: 335px;
+  transition: transform 1s;
+
+  //@media screen and (min-width: $breakpoint-desktop){
+  //  width: 340px;
+  //  height: 340px;
+  //
+  //  &:hover,
+  //  &:focus {
+  //    @include boxShadow;
+  //  }
+  //}
+  @media screen and (min-width: 769px){
+    width: 340px;
+    height: 340px;
+
+    &:hover,
+    &:focus {
+      //@include boxShadow;
+
+      box-shadow: rgba(255, 96, 96, 0.9) 0 0 22px 6px;
+    }
+  }
+
+  & img {
+    display: flex;
+    width: 100%;
+    //@include small-redius;
+
+    border-radius: 10px;
+    object-fit: cover;
+
+  }
+
+  &__layer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    //background-color: $linear-cards;
+    background-color: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    //@include WH-full;
+    width: 100%;
+    height: 100%;
+    //@include small-redius;
+    border-radius: 10px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    //@include font(18px, 500);
+
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+
+    color: #f1f1f1;
+    left: 5.88%;
+    right: 5.88%;
+    top: 78.82%;
+    bottom: 5.88%;
+  }
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 5px;
+  //@include small-redius;
+
+  border-radius: 10px;
+
+  margin: 22px 0;
+  flex-wrap: wrap;
+
+  //@media screen and (min-width: $breakpoint-desktop) {
+  //  gap: 50px;
+  //  padding: 5% 0%;
+  //  background-color: #f7f7f7;
+  //  @include big-redius;
+  //  margin: 40px 0;
+  //}
+  @media screen and (min-width: 769px) {
+    gap: 50px;
+    padding: 5% 0%;
+    background-color: #f7f7f7;
+    //@include big-redius;
+
+    border-radius: 25px;
+
+    margin: 40px 0;
+  }
+
+}
+
+.link_card_logement {
+  text-decoration: none;
+}
