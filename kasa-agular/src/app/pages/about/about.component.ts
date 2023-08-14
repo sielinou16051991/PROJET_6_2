@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { dataAbout } from '../../datas/DataAbout';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+  public dataAbout: any;
   constructor() { }
 
   ngOnInit(): void {
+    this.dataAbout = dataAbout;
   }
 
 }

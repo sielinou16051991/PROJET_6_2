@@ -1,1 +1,15 @@
-<p>about works!</p>
+<!--<p>about works!</p>-->
+<div>
+  <app-about-banner></app-about-banner>
+  <article *ngFor="let item of dataAbout; let id = index">
+    <app-collapse
+      [key]="id"
+      [aboutTitle]="item.aboutTitle"
+      [aboutText]="item.aboutText"
+      class="about-Style"
+
+    >
+
+    </app-collapse>
+  </article>
+</div>

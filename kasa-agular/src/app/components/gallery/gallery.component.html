@@ -1,1 +1,30 @@
-<p>gallery works!</p>
+
+<section id="gallery-container">
+<!--  // j'affiche la fleche si et seulement s'il y a 2 images ou plus (length > 1)-->
+  <img *ngIf="length > 1"
+       src="../../assets/images/leftArrow.svg"
+        alt="gauche"
+        class='leftArrow'
+       (click)="prevSlide()"
+  />
+  <img *ngIf="length > 1 "
+    src="../../../assets/images/rightArrow.svg"
+    alt="droite"
+    class='rightArrow'
+    (click)="nextSlide()"
+  />
+  <div *ngFor="let slide of slides; let index = index"
+    key="index"
+    [ngClass]="{
+         'slider bl-msk wh-msk active-anim': current === index,
+          'slider bl-msk wh-msk': current != index
+    }"
+  >
+    <img *ngIf="index === current" [src]="slide" alt="appartement à louer" />
+    <span *ngIf="index === current" class="slider__number">
+  {{current +1}}/{{length}}
+  </span>
+
+  </div>
+<!--  {/*Gallery*/}-->
+</section>

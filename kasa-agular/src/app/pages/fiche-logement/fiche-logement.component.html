@@ -1,1 +1,40 @@
-<p>fiche-logement works!</p>
+<!--<p>fiche-logement works!</p>-->
+<section  *ngIf="pickedAppart">
+  <div key="params.id" class="fiche-container">
+    <app-gallery [slides]="slidePics" > </app-gallery>
+    <!--    {/*FICHE LOGEMENT*/}-->
+    <section class='hostInfo-container'>
+      <div class='title-tags-container'>
+        <div class='title-container redFont'>
+          <h1>{{pickedAppart.title}}</h1>
+          <h3>{{pickedAppart.location}}</h3>
+        </div>
+        <div class="tags-container" *ngFor="let tag of tags">
+          <app-tag [keyFich]="tag" [tag]="tag" > </app-tag>
+        </div>
+      </div>
+      <div class='rate-host-container'>
+        <div class='host-container redFont'>
+          <app-host
+            [hostName]="pickedAppart.host.name"
+            [hostPicture]="pickedAppart.host.picture"
+            [hostId]="pickedAppart.host.id"
+          ></app-host>
+        </div>
+        <div class='rate-container'>
+          <app-rate [score]="pickedAppart.rating" ></app-rate>
+        </div>
+      </div>
+    </section>
+    <div class="collapse-fiche-container">
+      <app-collapse
+        [aboutTitle]="description"
+        [aboutText]="pickedAppart.description"
+      > </app-collapse>
+      <app-collapse
+        [aboutTitle]="equipements"
+        [aboutText]="equip"
+      ></app-collapse>
+    </div>
+  </div>
+</section>

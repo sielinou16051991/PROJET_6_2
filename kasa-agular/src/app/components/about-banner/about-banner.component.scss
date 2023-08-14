@@ -1,0 +1,32 @@
+.kasa_aboutBanner-background {
+  //@include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  //@include bkgrd($about-background-mobile);
+  background-blend-mode: darken;
+  background: rgba(0, 0, 0, 0.3) url(../../../assets/images/mobile-about-background.png) no-repeat;
+  background-size: cover;
+
+  width: 100%;
+  height: 223px;
+  margin-top: 20px;
+  //@include small-redius;
+  border-radius: 10px;
+
+  //@media screen and (min-width: $breakpoint-desktop) {
+  //  @include bkgrd($about-background);
+  //  @include big-redius;
+  //}
+
+  @media screen and (min-width: 769px) {
+    //@include bkgrd($about-background);
+    background-blend-mode: darken;
+    background: rgba(0, 0, 0, 0.3) url(../../../assets/images/about-background.png) no-repeat;
+    background-size: cover;
+
+    //@include big-redius;
+    border-radius: 25px;
+  }
+}

@@ -16,3 +16,78 @@
 //@import "src/components/Footer/Footer";
 //@import "../components/Header/Header";
 //@import "../components/Nav/Nav";
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+}
+
+body {
+  //@include body-position;
+
+  max-width: 768px;
+  min-width: 75px;
+  margin: auto;
+  @media screen and (min-width: 769px) {
+    max-width: 100%;
+  }
+}
+
+main {
+  margin: 5%;
+
+  //@media screen and (min-width: $breakpoint-desktop) {
+  //  margin: 0 100px;
+  //}
+  @media screen and (min-width: 769px) {
+    margin: 0 100px;
+  }
+}
+
+//.reFont {
+//  color: $primary-color;
+//}
+.reFont {
+  color: #ff6060;
+}
+
+.fiche-container {
+  //@include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.bl-msk {
+  //background: $background-color;
+  background: rgba(0, 0, 0, 0.3);
+
+  mix-blend-mode: darken;
+  //@include big-redius;
+  border-radius: 25px;
+}
+
+.wh-msk {
+  //background: $secondary-color;
+  background: #f7f7f7;
+  //@include small-redius;
+  border-radius: 10px;
+
+  //@media screen and (min-width: $breakpoint-desktop) {
+  //  @include big-redius;
+  //}
+  @media screen and (min-width: 769px) {
+    border-radius: 25px;
+  }
+}
+

@@ -1,2 +1,18 @@
-<p>rate works!</p>
 
+<div class='rate-comp'>
+  <section *ngFor="let level of stars">
+    <img *ngIf="score >= level"
+      key="level.toString()"
+      class='star'
+      src="../../../assets/images/star-rate.svg"
+      alt="étoile de notation"
+    />
+    <img *ngIf="score < level"
+      key="level.toString()"
+      class='star'
+      src="../../../assets/images/emptyStar.svg"
+      alt="étoile de notation"
+    />
+<!--    {/*Rate*/}-->
+  </section>
+</div>

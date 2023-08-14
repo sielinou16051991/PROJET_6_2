@@ -1,0 +1,15 @@
+.about-style {
+  width: 100%;
+  //@include flex-colum;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  //@media screen and (min-width: $breakpoint-desktop) {
+  //  width: 87.5%;
+  //}
+
+  @media screen and (min-width: 769px) {
+    width: 87.5%;
+  }
+}

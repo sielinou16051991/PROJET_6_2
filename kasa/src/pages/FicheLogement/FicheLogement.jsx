@@ -11,6 +11,7 @@ import Collapse from "../../components/Collapse/Collapse";
 export default function FicheLogement () {
     const params = useParams();
     const navigate = useNavigate();
+    console.log(params);
 
     const [pickedAppart, sePickedAppart] = useState();
     useEffect(() => {
