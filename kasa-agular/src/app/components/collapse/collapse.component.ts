@@ -11,26 +11,39 @@ export class CollapseComponent implements OnInit {
   @Input() aboutTitle: any;
   @Input() aboutText: any;
   @Input() aboutStyle: any;
+  @Input() dataCollapse: any;
 
   public toggle = false;
-   refHeight: boolean | undefined;
    public heightEl: any;
+   public arrayaboutText: any[] = [];
+   refHeight: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    // console.log(this.aboutText);
+    // console.log(this.dataCollapse);
     this.setHeightEl();
+    this.arrayaboutText = this.aboutText.split(',');
+    // console.log(this.arrayaboutText);
   }
 
   // tslint:disable-next-line:typedef
   toggleState() {
+    this.setToggle();
+    // this.refHeight = this.toggle;
+  }
+  // tslint:disable-next-line:typedef
+  setToggle() {
     this.toggle = !this.toggle;
-    this.refHeight = this.toggle;
   }
   // tslint:disable-next-line:typedef
   setHeightEl() {
+    // console.log(this.refHeight);
     // @ts-ignore
-    this.heightEl = `${this.refHeight.current.scrollHeight}px`;
+    // this.heightEl = `${this.refHeight.current.scrollHeight}px`;
+    // this.heightEl = this.refHeight;
+    // console.log(this.heightEl);
   }
 
 }

@@ -9,8 +9,8 @@
           <h1>{{pickedAppart.title}}</h1>
           <h3>{{pickedAppart.location}}</h3>
         </div>
-        <div class="tags-container" *ngFor="let tag of tags">
-          <app-tag [keyFich]="tag" [tag]="tag" > </app-tag>
+        <div *ngFor="let tag of tags" class="tags-container" >
+          <app-tag [keyFich]="tag" [tagElt]="tag" > </app-tag>
         </div>
       </div>
       <div class='rate-host-container'>
@@ -26,15 +26,23 @@
         </div>
       </div>
     </section>
-    <div class="collapse-fiche-container">
+    <div class="collapse-fiche-container" *ngIf="pickedAppart">
       <app-collapse
         [aboutTitle]="description"
         [aboutText]="pickedAppart.description"
       > </app-collapse>
       <app-collapse
         [aboutTitle]="equipements"
-        [aboutText]="equip"
+        [aboutText]="equipments"
       ></app-collapse>
+<!--      <app-collapse-->
+<!--        [aboutTitle]="equipements"-->
+<!--        [aboutText]="equip"-->
+<!--      ></app-collapse>-->
+<!--      <app-collapse-->
+<!--        [dataCollapse]="dataCollapse"-->
+<!--      ></app-collapse>-->
+
     </div>
   </div>
 </section>

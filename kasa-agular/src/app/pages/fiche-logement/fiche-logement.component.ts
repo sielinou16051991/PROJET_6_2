@@ -20,6 +20,7 @@ export class FicheLogementComponent implements OnInit {
   public equipments: any;
   public description = 'Description';
   public equipements = 'Équipements';
+   dataCollapse: any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private route: Router
@@ -28,11 +29,6 @@ export class FicheLogementComponent implements OnInit {
   ngOnInit(): void {
     this.params = this.activatedRoute.snapshot.params;
     this.getData();
-    console.log(this.params);
-    console.log(this.slidePics);
-    console.log(this.pickedAppart);
-    this.getData();
-    this.initParams();
   }
   // tslint:disable-next-line:typedef
   sePickedAppart(elt: any) {
@@ -41,26 +37,27 @@ export class FicheLogementComponent implements OnInit {
   // tslint:disable-next-line:typedef
   getData() {
     this.dataArray = data;
-    console.log(this.dataArray);
+    // console.log(this.dataArray);
     this.piked = this.dataArray.find((elt: any) => elt.id === this.params.id);
-    console.log(this.piked);
+    // console.log(this.piked);
     this.dataArray.map(() => this.sePickedAppart(this.piked));
+    this.initParams();
   }
 
   // tslint:disable-next-line:typedef
   initParams() {
+    this.dataCollapse = this.pickedAppart;
     this.slidePics = this.pickedAppart.pictures;
     this.tags = this.pickedAppart.tags;
     this.equipments = this.pickedAppart.equipments;
 
+    // console.log(this.tags);
     this.equip = this.equipments.forEach((item: any, index: any) => (
-      `<li
-        key=${index}
-    class='equipList'
-      >
+      `<li key=${index} class='equipList' >
       ${item}
       </li>
       `
     ));
+    // console.log(this.equip);
   }
 }

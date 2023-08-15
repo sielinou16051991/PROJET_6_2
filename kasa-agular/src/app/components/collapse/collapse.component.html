@@ -1,33 +1,42 @@
 <!--<p>collapse works!</p>-->
 
 <div class="collapse about-style">
-<!--  {/*<div>*/}-->
-<!--  {/*    {console.log(props)}*/}-->
-<!--  {/*</div>*/}-->
-  <div
-    (click)="toggleState()"
-    class="collapse__visible"
-  >
-    <h2>{{aboutTitle}}</h2>
-    <img
-    [ngClass]="toggle ? 'chevron roted' : 'chevron'"
-    src="../../../assets/images/chevron.svg"
-    alt="chevron"
-    />
-  </div>
-  <div
-      [ngClass]="toggle ? 'collapse__toggle animated' : 'collapse__toggle'"
-      ref=refHeight
-      [style]="{ height: toggle ? heightEl : '0px'}"
-    >
+      <div
+        (click)="toggleState()"
+        class="collapse__visible"
+      >
+        <h2>{{aboutTitle}}</h2>
+        <img
+        [ngClass]="toggle === false ? 'chevron roted' : 'chevron'"
+        src="../../../assets/images/chevron.svg"
+        alt="chevron"
+        />
+      </div>
+      <div
+          [ngClass]="toggle ? 'collapse__toggle animated' : 'collapse__toggle'"
+          [style]="{ height: toggle ? heightEl : '0px'}"
+        >
 
-    <p *ngIf="toggle" aria-hidden="true">
-    {{aboutText}}
-    </p>
-    <p *ngIf="!toggle" aria-hidden="false">
-    {{aboutText}}
-    </p>
+<!--        <p *ngIf="toggle" aria-hidden="true">-->
+<!--        {{aboutText}}-->
+<!--        </p>-->
 
-  </div>
+<!--        <p *ngIf="!toggle" >-->
+<!--          {{aboutText}}-->
+<!--        </p>-->
+<!--        <li *ngIf="!toggle" class='equipList'>-->
+<!--        </li>-->
+<!--        <ul *ngIf="!toggle" aria-hidden="false">-->
+<!--          <ul *ngFor="let text of aboutText">-->
+<!--            <li class='equipList'>-->
+<!--              {{text}}-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--&lt;!&ndash;        {{aboutText}}&ndash;&gt;-->
+<!--        </ul>-->
+
+      </div>
 <!--{/*COLLAPSE*/}-->
+
+<!--  {{aboutText}}-->
 </div>

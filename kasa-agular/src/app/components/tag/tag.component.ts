@@ -8,10 +8,12 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TagComponent implements OnInit {
 
   @Input() keyFich: any;
-  @Input() tag: any;
+  @Input() tagElt: any;
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.keyFich);
+    console.log(this.tagElt);
   }
 
 }

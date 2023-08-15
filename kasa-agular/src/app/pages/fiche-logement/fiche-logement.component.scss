@@ -1,0 +1,145 @@
+
+.fiche-container {
+  //@include flex-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.hostInfo-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+
+  //@media screen and (min-width: $breakpoint-desktop) {
+  //  flex-direction: row;
+  //  align-items: flex-end;
+  //}
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.title-tags-container {
+  //@include flex-colum;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    margin: 2% 0;
+    //@include font(18px, 500);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+
+    //@media screen and  (min-width: $breakpoint-desktop) {
+    //  @include font(36px, 500);
+    //}
+    @media screen and  (min-width: 769px) {
+      //@include font(36px, 500);
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+  }
+  h3 {
+    margin: 2% 0;
+    //@include font(14px, 500);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+
+    //@media screen and (min-width: $breakpoint-desktop) {
+    //  @include font(18px, 500);
+    //}
+    @media screen and (min-width: 769px) {
+      //@include font(18px, 500);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+  }
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.title-tags-container {
+  //@include flex-colum;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    margin: 2% 0;
+    //@include font(18px, 500);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+
+    //@media screen and  (min-width: $breakpoint-desktop) {
+    //  @include font(36px, 500);
+    //}
+    @media screen and  (min-width: 769px) {
+      //@include font(36px, 500);
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+  }
+  h3 {
+    margin: 2% 0;
+    //@include font(14px, 500);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+
+    //@media screen and (min-width: $breakpoint-desktop) {
+    //  @include font(18px, 500);
+    //}
+    @media screen and (min-width: 769px) {
+      //@include font(18px, 500);
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 142.6%;
+    }
+  }
+}
+
+
+.collapse-fiche-container {
+  //@include flex-colum;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+
+  //@media screen and (min-width: $breakpoint-desktop) {
+  //  flex-direction: row;
+  //  gap: 6%;
+  //}
+  @media screen and (min-width: 769px) {
+    flex-direction: row;
+    gap: 6%;
+  }
+}
+
+
+
