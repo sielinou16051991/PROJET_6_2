@@ -15,6 +15,7 @@ export default function Collapse(props) {
     const refHeight = useRef(); // conservation de la valeur du collaps déplié
 
     useEffect(() => {
+        console.log(refHeight);
         setHeightEl(`${refHeight.current.scrollHeight}px`);
     }, []); // définition de la hauteur du collapse déplié a sa première ouverture et conservation de cette hauteur dans refHeight
 
