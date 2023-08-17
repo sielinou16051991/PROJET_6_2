@@ -2,9 +2,6 @@
   width: 100%;
   margin: 20px 0;
 
-  //@media screen and (min-width: $breakpoint-desktop) {
-  //  margin: 31px auto 0;
-  //}
   @media screen and (min-width: 769px) {
     margin: 31px auto 0;
   }
@@ -25,9 +22,7 @@
     border-radius: 5px;
     width: 100%;
 
-    //@media screen and (min-width: $breakpoint-desktop) {
-    //  height: 47px;
-    //}
+
     @media screen and (min-width: 769px) {
       height: 47px;
     }
@@ -43,7 +38,6 @@
       //  @include font(24px, 500);
       //}
       @media screen and (min-width: 769px) {
-        //@include font(24px, 500);
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
@@ -78,7 +72,6 @@
       //}
 
       @media screen and (min-width: 769px) {
-        //@include font(24px, 400);
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
@@ -86,6 +79,38 @@
       }
     }
   }
+}
+.collapse__toggle-animated {
+
+  //color: $primary-color;
+  color: #ff6060;
+
+  //background: $secondary-color;
+  background: #f7f7f7;
+
+  border-radius: 5px;
+
+  p {
+    margin: 0;
+    padding: 22px 15px;
+    pointer-events: none;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.6%;
+
+
+    @media screen and (min-width: 769px) {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 142.6%;
+    }
+  }
+
+  opacity: 1;
+  transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .animated {
@@ -98,10 +123,6 @@
   transform: rotate(0deg);
   transition: 0.4s 0.4s ease-in-out;
 
-  //@media screen and (min-width: $breakpoint-desktop) {
-  //  width: 15px;
-  //}
-
   @media screen and (min-width: 769px) {
     width: 15px;
   }
@@ -112,24 +133,22 @@
   transition: 0.4s ease-in-out;
 }
 
-//.about-style {
-//  width: 100%;
-//  @include flex-colum;
-//
-//  @media screen and (min-width: $breakpoint-desktop) {
-//    width: 87.5%;
-//  }
-//}
+.chevron-roted {
+  width: 9px;
+
+  @media screen and (min-width: 769px) {
+    width: 15px;
+  }
+  transform: rotate(180deg);
+  transition: 0.4s 0.4s ease-in-out;
+}
+
 .about-style {
   width: 100%;
-  //@include flex-colum;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  //@media screen and (min-width: $breakpoint-desktop) {
-  //  width: 87.5%;
-  //}
 
   @media screen and (min-width: 769px) {
     width: 87.5%;
@@ -144,10 +163,6 @@
 
   width: 100%;
 
-  //@media screen and (min-width: $breakpoint-desktop) {
-  //  flex-direction: row;
-  //  gap: 6%;
-  //}
   @media screen and (min-width: 769px) {
     flex-direction: row;
     gap: 6%;

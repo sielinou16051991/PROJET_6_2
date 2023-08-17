@@ -4,7 +4,7 @@
 <app-banner></app-banner>
 <div class="cards-container">
   <div class="card_logement" *ngFor="let appart of data; let id = index">
-    <a href="./logement/{{appart.id}}" class="link_card_logement">
+    <a routerLink="./logement/{{appart.id}}" class="link_card_logement">
       <app-card [coverCard]="appart.cover" [titleCard]="appart.title"></app-card>
     </a>
   </div>

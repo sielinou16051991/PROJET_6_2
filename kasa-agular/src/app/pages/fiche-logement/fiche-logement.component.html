@@ -1,7 +1,9 @@
 <!--<p>fiche-logement works!</p>-->
 <section  *ngIf="pickedAppart">
   <div key="params.id" class="fiche-container">
-    <app-gallery [slides]="slidePics" > </app-gallery>
+    <div class="gallery-container">
+      <app-gallery [slides]="slidePics" > </app-gallery>
+    </div>
     <!--    {/*FICHE LOGEMENT*/}-->
     <section class='hostInfo-container'>
       <div class='title-tags-container'>
@@ -26,23 +28,19 @@
         </div>
       </div>
     </section>
-    <div class="collapse-fiche-container" *ngIf="pickedAppart">
-      <app-collapse
-        [aboutTitle]="description"
-        [aboutText]="pickedAppart.description"
-      > </app-collapse>
-      <app-collapse
-        [aboutTitle]="equipements"
-        [aboutText]="equipments"
-      ></app-collapse>
-<!--      <app-collapse-->
-<!--        [aboutTitle]="equipements"-->
-<!--        [aboutText]="equip"-->
-<!--      ></app-collapse>-->
-<!--      <app-collapse-->
-<!--        [dataCollapse]="dataCollapse"-->
-<!--      ></app-collapse>-->
-
+    <div class="flex-row">
+      <div class="collapse-fiche-container" *ngIf="pickedAppart">
+        <app-collapse
+          [aboutTitle]="description"
+          [aboutText]="pickedAppart.description"
+        > </app-collapse>
+      </div>
+      <div class="collapse-fiche-container" *ngIf="pickedAppart">
+        <app-collapse
+          [aboutTitle]="equipements"
+          [aboutText]="equipments"
+        ></app-collapse>
+      </div>
     </div>
   </div>
 </section>

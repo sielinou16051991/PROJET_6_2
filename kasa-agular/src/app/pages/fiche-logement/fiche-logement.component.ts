@@ -20,6 +20,7 @@ export class FicheLogementComponent implements OnInit {
   public equipments: any;
   public description = 'Description';
   public equipements = 'Équipements';
+  public aboutStyle = 'about-style';
    dataCollapse: any;
   constructor(
     private activatedRoute: ActivatedRoute,

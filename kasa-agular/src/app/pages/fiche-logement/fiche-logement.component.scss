@@ -7,6 +7,11 @@
 
   flex-direction: column;
 }
+.gallery-container {
+  width: 100%;
+  height: 100%;
+  //background: black;
+}
 
 .hostInfo-container {
   display: flex;
@@ -14,10 +19,6 @@
   width: 100%;
   justify-content: space-between;
 
-  //@media screen and (min-width: $breakpoint-desktop) {
-  //  flex-direction: row;
-  //  align-items: flex-end;
-  //}
   @media screen and (min-width: 769px) {
     flex-direction: row;
     align-items: flex-end;
@@ -25,7 +26,6 @@
 }
 
 .title-tags-container {
-  //@include flex-colum;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -125,20 +125,19 @@
 
 .collapse-fiche-container {
   //@include flex-colum;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
+  width: 45%;
 
-  width: 100%;
-
-  //@media screen and (min-width: $breakpoint-desktop) {
-  //  flex-direction: row;
-  //  gap: 6%;
-  //}
   @media screen and (min-width: 769px) {
     flex-direction: row;
     gap: 6%;
   }
+}
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
 }
 
 

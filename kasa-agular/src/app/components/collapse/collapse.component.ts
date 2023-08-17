@@ -21,11 +21,12 @@ export class CollapseComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // console.log(this.aboutText);
+    console.log(this.aboutStyle);
     // console.log(this.dataCollapse);
     this.setHeightEl();
-    this.arrayaboutText = this.aboutText.split(',');
-    // console.log(this.arrayaboutText);
+    // this.arrayaboutText = this.aboutText.split(1, ',');
+    console.log(this.arrayaboutText);
+    console.log(this.aboutText);
   }
 
   // tslint:disable-next-line:typedef
